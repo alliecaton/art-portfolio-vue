@@ -3,6 +3,7 @@
 		<div class="parent-container">
 			<router-link to="/" class="nav-link">home</router-link>
 			<router-link to="/art" class="nav-link">art</router-link>
+			<router-link to="/zines" class="nav-link">zines</router-link>
 		</div>
 	</div>
 </template>

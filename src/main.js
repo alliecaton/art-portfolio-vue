@@ -3,7 +3,8 @@ import App from './App.vue'
 
 import { createWebHistory, createRouter } from 'vue-router'
 import Home from './components/pages/home/Home.vue'
-import Art from './components/Images'
+import Art from './components/pages/art/Images'
+import Zines from './components/pages/zines/Zines'
 
 const routes = [
 	{
@@ -15,6 +16,11 @@ const routes = [
 		path: '/art',
 		name: 'Art',
 		component: Art,
+	},
+	{
+		path: '/zines',
+		name: 'Zines',
+		component: Zines,
 	},
 ]
 
