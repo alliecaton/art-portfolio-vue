@@ -39,7 +39,9 @@ a {
 	color: rgb(255, 137, 156);
 }
 
-a:hover {
+a:hover,
+a:active,
+a.router-link-active {
 	color: rgb(255, 176, 58);
 }
 
