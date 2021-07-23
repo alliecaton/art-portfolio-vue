@@ -28,7 +28,7 @@ export default {
 
 <style scoped>
 .nav-container {
-	background-color: rgba(249, 213, 158, 0.473);
+	background-color: rgb(255, 238, 212);
 	border-radius: 5px;
 }
 

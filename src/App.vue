@@ -1,20 +1,20 @@
 <template>
 	<nav-bar></nav-bar>
-	<about-image></about-image>
+	<home-page></home-page>
 
 	<!-- <images></images> -->
 </template>
 
 <script>
 import NavBar from './components/NavBar.vue'
-import AboutImage from './components/AboutImage.vue'
+import HomePage from './components/pages/home/Home.vue'
 // import Images from './components/Images'
 
 export default {
 	name: 'App',
 	components: {
 		NavBar,
-		AboutImage,
+		HomePage,
 		// Images,
 	},
 }
