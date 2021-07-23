@@ -1,30 +1,12 @@
 <template>
 	<div class="nav-container">
-		<div v-for="link in links" :key="link.title" class="parent-container">
-			<nav-link :title="link.title" :link="link.link"></nav-link>
+		<div class="parent-container">
+			<router-link to="/" class="nav-link">home</router-link>
 		</div>
 	</div>
 </template>
 
-<script>
-import NavLink from './NavLink.vue'
-
-export default {
-	name: 'nav-bar',
-	components: {
-		NavLink,
-	},
-	data() {
-		return {
-			links: [
-				{ title: 'original', link: 'http://google.com' },
-				{ title: 'fanwork', link: 'http://twitter.com' },
-				{ title: 'contact', link: 'http://yahoo.com' },
-			],
-		}
-	},
-}
-</script>
+<script></script>
 
 <style scoped>
 .nav-container {
@@ -38,5 +20,10 @@ export default {
 .parent-container {
 	display: inline-block;
 	padding: 10px;
+}
+
+.nav-link {
+	margin: 3px;
+	padding: 0 10px 0 10px;
 }
 </style>

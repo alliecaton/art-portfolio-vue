@@ -1,21 +1,24 @@
 <template>
 	<h1 class="web-title">alliestration</h1>
 	<nav-bar></nav-bar>
-	<home-page></home-page>
+	<!-- <router-link to="/"></router-link> -->
+	<!-- <home-page></home-page> -->
 
 	<!-- <images></images> -->
+
+	<router-view></router-view>
 </template>
 
 <script>
 import NavBar from './components/NavBar.vue'
-import HomePage from './components/pages/home/Home.vue'
+// import HomePage from './components/pages/home/Home.vue'
 // import Images from './components/Images'
 
 export default {
 	name: 'App',
 	components: {
 		NavBar,
-		HomePage,
+		// HomePage,
 		// Images,
 	},
 }
