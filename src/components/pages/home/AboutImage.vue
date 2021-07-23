@@ -1,9 +1,11 @@
 <template>
-	<img
-		class="image"
-		src="@/assets/original/selfport.png"
-		alt="portrait of allie"
-	/>
+	<div class="container">
+		<img
+			class="image"
+			src="@/assets/original/selfport.png"
+			alt="portrait of allie"
+		/>
+	</div>
 </template>
 
 <script>
@@ -13,9 +15,14 @@ export default {
 </script>
 
 <style scoped>
-.image {
+.container {
+	max-width: 25%;
 	padding: 40px;
-	width: 25%;
+	min-width: 200px;
+}
+
+.image {
+	width: 100%;
 	border-radius: 50%;
 }
 </style>

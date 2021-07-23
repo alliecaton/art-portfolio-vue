@@ -1,4 +1,5 @@
 <template>
+	<h1 class="web-title">alliestration</h1>
 	<nav-bar></nav-bar>
 	<home-page></home-page>
 
@@ -37,5 +38,9 @@ a {
 
 a:hover {
 	color: rgb(255, 176, 58);
+}
+
+.web-title {
+	text-align: center;
 }
 </style>
