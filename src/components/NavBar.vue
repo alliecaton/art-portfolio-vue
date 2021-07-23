@@ -28,11 +28,15 @@ export default {
 
 <style scoped>
 .nav-container {
+	margin: auto;
 	background-color: rgb(255, 238, 212);
 	border-radius: 5px;
+	text-align: center;
+	width: 70%;
 }
 
 .parent-container {
 	display: inline-block;
+	padding: 10px;
 }
 </style>
