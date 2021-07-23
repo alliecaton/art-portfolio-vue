@@ -1,17 +1,21 @@
 <template>
 	<nav-bar></nav-bar>
-	<images></images>
+	<about-image></about-image>
+
+	<!-- <images></images> -->
 </template>
 
 <script>
 import NavBar from './components/NavBar.vue'
-import Images from './components/Images'
+import AboutImage from './components/AboutImage.vue'
+// import Images from './components/Images'
 
 export default {
 	name: 'App',
 	components: {
 		NavBar,
-		Images,
+		AboutImage,
+		// Images,
 	},
 }
 </script>

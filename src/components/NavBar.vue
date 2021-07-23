@@ -17,9 +17,9 @@ export default {
 	data() {
 		return {
 			links: [
-				{ title: 'google', link: 'http://google.com' },
-				{ title: 'twitter', link: 'http://twitter.com' },
-				{ title: 'yahoo', link: 'http://yahoo.com' },
+				{ title: 'original', link: 'http://google.com' },
+				{ title: 'fanwork', link: 'http://twitter.com' },
+				{ title: 'contact', link: 'http://yahoo.com' },
 			],
 		}
 	},

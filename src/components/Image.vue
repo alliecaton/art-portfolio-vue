@@ -1,8 +1,9 @@
 <template>
 	<img
 		@click="$emit('onClick', id)"
-		:src="require(`@/assets/${file}`)"
+		:src="require(`@/assets/original/${file}`)"
 		:alt="alt"
+		:class="[selected ? red : blue]"
 	/>
 </template>
 
@@ -13,7 +14,28 @@ export default {
 		alt: String,
 		file: String,
 		id: Number,
+		selected: Boolean,
 	},
 	emits: ['onClick'],
+	data() {
+		return {
+			red: 'red',
+			blue: 'blue',
+		}
+	},
 }
 </script>
+
+<style scoped>
+.red {
+	border: 5px solid;
+	border-radius: 5px;
+	border-color: red;
+}
+
+.blue {
+	border: 5px solid;
+	border-radius: 5px;
+	border-color: blue;
+}
+</style>

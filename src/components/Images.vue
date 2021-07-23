@@ -7,6 +7,7 @@
 				:id="img.id"
 				:alt="img.alt"
 				:file="img.file"
+				:selected="img.selected"
 			></image-component>
 		</div>
 	</div>
@@ -45,6 +46,7 @@ export default {
 			console.log('hit event')
 			const image = this.images.find(image => image.id === id)
 			image.selected = !image.selected
+			console.log(image.id, image.selected)
 		},
 	},
 }
