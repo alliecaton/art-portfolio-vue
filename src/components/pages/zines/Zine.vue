@@ -38,6 +38,10 @@ export default {
 	width: 200px;
 	height: 200px;
 	overflow: hidden;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 6px;
 }
 
 img {
@@ -45,7 +49,21 @@ img {
 }
 
 .cont {
-	padding: 10%;
+	width: 250px;
+	padding: 20px;
 	text-align: center;
+}
+
+a {
+	cursor: pointer;
+}
+
+p {
+	margin: 5px;
+}
+
+h4 {
+	margin: 5px;
+	padding-top: 3px;
 }
 </style>
