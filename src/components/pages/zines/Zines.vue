@@ -57,5 +57,8 @@ export default {
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: space-around;
+	width: 85%;
+	margin: auto;
+	padding: 10px;
 }
 </style>
