@@ -1,6 +1,6 @@
 <template>
 	<div class="flex">
-		<div v-for="zine in zines" :key="zine.id">
+		<div v-for="zine in zines" :key="zine._id">
 			<zine :zine="zine"></zine>
 		</div>
 	</div>
@@ -14,6 +14,8 @@ const query = `*[_type == "product"]{
   _id,
   title,
   slug,
+  twitter,
+  store,
   body, 
   images
 }[0...50]`
@@ -47,6 +49,7 @@ export default {
 					this.error = error
 				}
 			)
+			this.loading = false
 		},
 	},
 }

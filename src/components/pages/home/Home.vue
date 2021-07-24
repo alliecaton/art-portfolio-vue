@@ -1,6 +1,6 @@
 <template>
 	<div class="home-flex-container">
-		<about-image></about-image> •
+		<about-image></about-image>
 		<about-description></about-description>
 	</div>
 </template>
@@ -21,7 +21,6 @@ export default {
 <style scoped>
 .home-flex-container {
 	margin: 40px;
-	/* width: 70%; */
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: center;

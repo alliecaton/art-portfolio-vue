@@ -1,41 +1,37 @@
 <template>
-	<img
-		@click="$emit('onClick', id)"
-		:src="require(`@/assets/original/${file}`)"
-		:alt="alt"
-		:class="[selected ? red : blue]"
-	/>
+	<div class="thumb-image">
+		<img :src="formatUrl(image.images[0].asset._ref)" />
+	</div>
 </template>
 
 <script>
 export default {
 	name: 'image-component',
-	props: {
-		alt: String,
-		file: String,
-		id: Number,
-		selected: Boolean,
-	},
-	emits: ['onClick'],
-	data() {
-		return {
-			red: 'red',
-			blue: 'blue',
-		}
+	props: ['image'],
+	methods: {
+		console() {
+			console.log(this.image)
+		},
+
+		formatUrl(url) {
+			const array = url.split('-')
+			array.shift()
+			return `https://cdn.sanity.io/images/9k3xxnla/production/${array[0]}-${array[1]}.${array[2]}`
+		},
 	},
 }
 </script>
 
 <style scoped>
-.red {
-	border: 5px solid;
-	border-radius: 5px;
-	border-color: red;
+.thumb-image {
+	width: 200px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
 
-.blue {
-	border: 5px solid;
-	border-radius: 5px;
-	border-color: blue;
+img {
+	width: 100%;
+	border-radius: 6px;
 }
 </style>

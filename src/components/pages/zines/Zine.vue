@@ -5,8 +5,8 @@
 		</div>
 		<h4>{{ zine.title }}</h4>
 		<p>{{ zine.body }}</p>
-		<a :href="zine.link" target="_">store link</a> |
-		<a :href="twitter">twitter</a>
+		<a :href="zine.store" target="_blank">store link</a> |
+		<a :href="zine.twitter" target="_blank">twitter</a>
 	</div>
 </template>
 
@@ -19,11 +19,6 @@ export default {
 	props: ['zine'],
 
 	methods: {
-		console() {
-			console.log(this.zine)
-			console.log(this.zine.name)
-		},
-
 		formatUrl(url) {
 			const array = url.split('-')
 			array.shift()
