@@ -2,11 +2,13 @@
 	"name": "alliestration-portfolio",
 	"version": "0.1.0",
 	"private": true,
+	"homepage": "https://github.com/alliecaton/art-portfolio-vue",
+	"wst": "/dist/",
 	"scripts": {
 		"serve": "vue-cli-service serve --host localhost",
 		"build": "vue-cli-service build",
 		"lint": "vue-cli-service lint",
-		"deploy": "sh deploy.sh"
+		"deploy": "node ./node_modules/vue-gh-pages/index.js"
 	},
 	"dependencies": {
 		"@sanity/client": "^2.13.0",
@@ -23,7 +25,8 @@
 		"@vue/compiler-sfc": "^3.0.0",
 		"babel-eslint": "^10.1.0",
 		"eslint": "^6.7.2",
-		"eslint-plugin-vue": "^7.0.0"
+		"eslint-plugin-vue": "^7.0.0",
+		"vue-gh-pages": "^1.19.1"
 	},
 	"eslintConfig": {
 		"root": true,
