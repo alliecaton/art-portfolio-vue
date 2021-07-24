@@ -1,13 +1,16 @@
 <template>
-	<div class="flex">
+	<!-- <div class="flex"> -->
+	<image-cards>
 		<div v-for="zine in zines" :key="zine._id">
 			<zine :zine="zine"></zine>
 		</div>
-	</div>
+	</image-cards>
+	<!-- </div> -->
 </template>
 
 <script>
 import Zine from './Zine'
+import ImageCards from '../../ImageCards.vue'
 import sanity from '../../../client'
 
 const query = `*[_type == "product"]{
@@ -24,6 +27,7 @@ export default {
 	name: 'zines',
 	components: {
 		Zine,
+		ImageCards,
 	},
 
 	data() {
@@ -54,14 +58,3 @@ export default {
 	},
 }
 </script>
-
-<style scoped>
-.flex {
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: space-around;
-	width: 85%;
-	margin: auto;
-	padding: 10px;
-}
-</style>

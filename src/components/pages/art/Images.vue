@@ -1,14 +1,15 @@
 <template>
-	<div class="flex">
+	<image-cards>
 		<div v-for="image in images" :key="image._id">
 			<image-component :image="image"></image-component>
 		</div>
-	</div>
+	</image-cards>
 </template>
 
 <script>
 import ImageComponent from './Image'
 import sanity from '../../../client'
+import ImageCards from '../../ImageCards.vue'
 
 const query = `*[_type == "art"]{
   _id,
@@ -22,6 +23,7 @@ export default {
 	name: 'images-container',
 	components: {
 		ImageComponent,
+		ImageCards,
 	},
 
 	data() {
@@ -53,15 +55,3 @@ export default {
 	},
 }
 </script>
-
-<style scoped>
-.flex {
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: space-around;
-	align-items: center;
-	width: 85%;
-	margin: auto;
-	padding: 10px;
-}
-</style>

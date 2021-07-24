@@ -1,10 +1,6 @@
 <template>
 	<div class="container">
-		<img
-			class="image"
-			src="@/assets/original/selfport.png"
-			alt="portrait of allie"
-		/>
+		<img class="image" src="@/assets/selfport.png" alt="portrait of allie" />
 	</div>
 </template>
 
