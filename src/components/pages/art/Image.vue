@@ -31,6 +31,11 @@ export default {
 	margin-right: auto;
 }
 
+/* .thumb-image:hover {
+	border-style: solid 2px;
+	border-color: rgb(66, 225, 188);
+} */
+
 img {
 	width: 100%;
 	border-radius: 6px;
