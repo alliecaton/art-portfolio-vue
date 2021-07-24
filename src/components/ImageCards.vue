@@ -12,6 +12,6 @@
 	width: 85%;
 	margin: auto;
 	padding: 10px;
-	align-items: center;
+	/* align-items: center; */
 }
 </style>

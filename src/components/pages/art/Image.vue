@@ -24,6 +24,7 @@ export default {
 
 <style scoped>
 .thumb-image {
+	padding: 20px;
 	width: 200px;
 	display: block;
 	margin-left: auto;
