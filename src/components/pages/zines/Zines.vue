@@ -8,6 +8,15 @@
 
 <script>
 import Zine from './Zine'
+import sanity from '../../../client'
+
+const query = `*[_type == "product"]{
+  _id,
+  title,
+  slug,
+  body, 
+  images
+}[0...50]`
 
 export default {
 	name: 'zines',
@@ -17,39 +26,27 @@ export default {
 
 	data() {
 		return {
-			zines: [
-				{
-					id: 1,
-					name: 'Millennium Girls',
-					images: [
-						{ path: '', type: 'cover' },
-						{ path: '', type: 'thumb' },
-						{ path: '', type: 'thumb' },
-						{ path: '', type: 'thumb' },
-						{ path: '', type: 'thumb' },
-					],
-					description: 'girls!',
-					twitter: 'https://twitter.com/cartoongrlszine',
-					link:
-						'https://alliezines.storenvy.com/products/31623445-millennium-girls',
-				},
-				{
-					id: 2,
-					name: '90s Girls',
-					images: [
-						{ path: '', type: 'cover' },
-						{ path: '', type: 'thumb' },
-						{ path: '', type: 'thumb' },
-						{ path: '', type: 'thumb' },
-						{ path: '', type: 'thumb' },
-					],
-					description: 'girls frmo the 90s!',
-					twitter: 'https://twitter.com/cartoongrlszine',
-					link:
-						'https://alliezines.storenvy.com/products/31623457-90s-babes-zine',
-				},
-			],
+			loading: false,
+			zines: [],
 		}
+	},
+
+	created() {
+		this.fetchData()
+	},
+	methods: {
+		fetchData() {
+			this.loading = true
+			sanity.fetch(query).then(
+				zines => {
+					this.loading = false
+					this.zines = zines
+				},
+				error => {
+					this.error = error
+				}
+			)
+		},
 	},
 }
 </script>
