@@ -39,6 +39,7 @@ export default {
 			this.loading = true
 			sanity.fetch(query).then(
 				zines => {
+					console.log(zines)
 					this.loading = false
 					this.zines = zines
 				},
