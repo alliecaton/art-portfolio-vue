@@ -1,6 +1,6 @@
 <template>
 	<div class="home-flex-container">
-		<about-image></about-image>
+		<about-image></about-image> •
 		<about-description></about-description>
 	</div>
 </template>
