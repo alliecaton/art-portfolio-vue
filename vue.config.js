@@ -1,3 +1,4 @@
 module.exports = {
-	publicPath: '/art-portfolio-vue/',
+	publicPath:
+		process.env.NODE_ENV === 'production' ? '/art-portfolio-vue/' : '/',
 }
