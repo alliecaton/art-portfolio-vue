@@ -1,5 +1,5 @@
 <template>
-	<h1 class="web-title">alliestration</h1>
+	<h1 class="web-title">✦ alliestration ✦</h1>
 	<nav-bar></nav-bar>
 
 	<router-view></router-view>
@@ -40,5 +40,6 @@ a.router-link-active {
 
 .web-title {
 	text-align: center;
+	color: rgb(66, 225, 188);
 }
 </style>
